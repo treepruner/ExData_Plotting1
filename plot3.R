@@ -53,7 +53,7 @@ names(unclass(proj1$stime)) #  #  "POSIXlt" "POSIXt"  wday
 # plot 3 
 setwd("C:/Users/testsubject941/Documents/GitHub/ExData_Plotting1")
 dateRange = c(min(proj1$stime), max(proj1$stime) + days(1) )
-png(file = "plot3.png", bg = "transparent", width = 480, height = 480)
+png(file = "plot3.png",  width = 480, height = 480)
 par(mar = c(4,4,2,2), new = TRUE)
 with(proj1, {
         plot(stime, Sub_metering_1
@@ -75,6 +75,8 @@ legend("topright"
        , col = c("black", "red", "blue")
        , lty = c(1,1,1), lwd = 2
        , legend = c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"))
-dev.off()     
+dev.off()    
+
+# check to see if it is there
 dir() 
 

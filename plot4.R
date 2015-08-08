@@ -54,7 +54,7 @@ names(unclass(proj1$stime)) #  #  "POSIXlt" "POSIXt"  wday
 # set up for plot 4
 setwd("C:/Users/testsubject941/Documents/GitHub/ExData_Plotting1")
 dateRange = c(min(proj1$stime), max(proj1$stime) + days(1) )
-png(file = "plot4.png", bg = "transparent", width = 480, height = 480)
+png(file = "plot4.png",  width = 480, height = 480)
 par(mfcol = c(2,2),   mar = c(4,4,2,2))
 
 # upper left Global Active Power
@@ -111,7 +111,6 @@ with (proj1, {
         axis.POSIXct(1, at=seq(dateRange[1], dateRange[2], by="day"), format="%a") 
         mtext("datetime", side=1, line=3)  
 })
-
 
 dev.off()     
 

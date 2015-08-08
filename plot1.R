@@ -50,7 +50,7 @@ sapply(split(proj1$Global_active_power, proj1$sdate),sum)
 
 # plot1
 setwd("C:/Users/testsubject941/Documents/GitHub/ExData_Plotting1")
-png(file = "plot1.png", bg = "transparent", width = 480, height = 480)
+png(file = "plot1.png",  width = 480, height = 480)
 hist((proj1$Global_active_power)
      , main = "Global Active Power"
      , col= "red"
@@ -58,5 +58,7 @@ hist((proj1$Global_active_power)
      , xaxt = "n" 
 )
 axis(side=1, at=seq(0,6, by = 2), labels= seq(0,6, by = 2)) 
-dev.off()     
+dev.off() 
+
+# check to see if it is there
 dir() 

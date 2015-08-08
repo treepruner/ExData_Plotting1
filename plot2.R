@@ -53,7 +53,7 @@ names(unclass(proj1$stime)) #  #  "POSIXlt" "POSIXt"  wday
 # plot 2 
 setwd("C:/Users/testsubject941/Documents/GitHub/ExData_Plotting1")
 dateRange = c(min(proj1$stime), max(proj1$stime) + days(1) )
-png(file = "plot2.png", bg = "transparent", width = 480, height = 480)
+png(file = "plot2.png",  width = 480, height = 480)
 plot(proj1$stime, proj1$Global_active_power
      , type = "l"
      , ylab = "Global Active Power (kilowatts)"
@@ -61,5 +61,7 @@ plot(proj1$stime, proj1$Global_active_power
      , xaxt = "n" 
 )
 axis.POSIXct(1, at=seq(dateRange[1], dateRange[2], by="day"), format="%a") 
-dev.off()     
+dev.off()
+
+# check to see if it is there
 dir() 
